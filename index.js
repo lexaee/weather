@@ -33,8 +33,10 @@ function run2() {
     .then((response) => response.json())
     .then((response) => {
       console.log("Here is the weather", response);
-      const output = response.main.temp;
+      const temperature = Math.round(response.main.temp);
+      const output = Math.round(response.main.temp);
       console.log("The Temprerature is", output);
+      response.main.temp = temperature;
       renderTo(response, "weather.mustache", "#weather-container");
     })
 

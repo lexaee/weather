@@ -13,6 +13,29 @@ function run() {
     .then((response) => {
       console.log("Locations", response);
       renderTo(response, "location.mustache", "#grid-container");
+      response.data.forEach((element, index) => {
+
+        fetch(
+          `https://cors.bbz.cloud/api.content.tripadvisor.com:443/api/v1/location/${element.location_id}/photos?language=en&key=7403A2F14821423C901207060F9DFAD4`,
+        )
+          .then((response) => response.json())
+          .then((response) => {
+            
+            const elements = document.querySelectorAll('#image-location');
+
+            console.log(elements)
+
+            // Iterate over the elements and modify them
+            for (let i = 0; i < elements.length; i++) {
+              if (i === index) {
+                console.log(i, index)
+                console.log(response)
+                element.src = response.data[0].images.thumbnail.url;
+              }
+            }
+          })
+          .catch((err) => console.error(err));
+      });
       run2();
     })
     .catch((err) => console.error(err));

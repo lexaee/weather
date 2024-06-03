@@ -35,7 +35,7 @@ function run2() {
       console.log("Here is the weather", response);
       const output = response.main.temp;
       console.log("The Temprerature is", output);
-      renderTo(output, "weather.mustache", "#weather-container");
+      renderTo(response, "weather.mustache", "#weather-container");
     })
 
     .catch((err) => console.error(err));

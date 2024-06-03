@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traveltunes</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script src="https://frontend.bbz.cloud/scripts/v1/render.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="Erklaerungsseite.html">Erklärungsseite</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <input type="text" name="suchfeld" id="suchfeld" />
+      <button onclick="run()">Search</button>
+
+      <div class="alles">
+        <div class="grid-container" id="grid-container"></div>
+
+        <div class="weather-primary">
+          <h2>Weather</h2>
+          <p>The current temperature in your city is</p>
+          <div id="weather-container"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+:root {
+  --color-primary: #757575;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins";
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.grid-item {
+  background-color: var(--color-primary);
+  width: 400px;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+
+.weather-primary {
+  margin-right: 10%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+#suchfeld {
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 1% 2%;
+  margin-left: 3%;
+}
+
+button {
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 1% 2%;
+}
+
+img {
+  height: 30px;
+}
+
+.ort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.alles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.musicbuttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.musicbuttons img {
+  width: 8%;
+}
+
+.jana-alexandra {
+  display: flex;
+  flex-direction: row;
+}
+
+.jana-alexandra img {
+  width: 30%;
+  padding: 0 5%;
+  height: 100%;
+}
+
+.ueberunstext {
+  display: flex;
+  flex-direction: column;
+}
+
+.erklaerungsseite ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.erklaerungsseite {
+  margin: 5%;
+  width: 50%;
+}
